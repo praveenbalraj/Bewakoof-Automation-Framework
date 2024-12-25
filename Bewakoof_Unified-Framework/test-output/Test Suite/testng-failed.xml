@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Test Suite]" guice-stage="DEVELOPMENT">
+  <parameter name="platform" value="Desktop"/>
+  <test thread-count="5" name="Mobile Chrome(failed)">
+    <classes>
+      <class name="com.qa.bk.PLPmodule.PLPTest">
+        <methods>
+          <include name="ac"/>
+          <include name="test1"/>
+          <include name="startserver"/>
+          <include name="setUp"/>
+          <include name="stopserver"/>
+        </methods>
+      </class> <!-- com.qa.bk.PLPmodule.PLPTest -->
+    </classes>
+  </test> <!-- Mobile Chrome(failed) -->
+</suite> <!-- Failed suite [Test Suite] -->

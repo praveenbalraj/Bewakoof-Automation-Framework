@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Desktop Test Suite]" guice-stage="DEVELOPMENT">
+  <parameter name="browser" value="edge"/>
+  <parameter name="platform" value="desktop"/>
+  <listeners>
+    <listener class-name="com.qa.bk.genericUtility.ITestListenerImpClass"/>
+  </listeners>
+  <test thread-count="5" name="Bewakoof Test(failed)">
+    <classes>
+      <class name="com.qa.bk.DesktopModule.PLPTest">
+        <methods>
+          <include name="ac"/>
+          <include name="am"/>
+          <include name="startserver"/>
+          <include name="setUp"/>
+          <include name="stopserver"/>
+          <include name="Validate_Sort_Functionality"/>
+        </methods>
+      </class> <!-- com.qa.bk.DesktopModule.PLPTest -->
+    </classes>
+  </test> <!-- Bewakoof Test(failed) -->
+</suite> <!-- Failed suite [Desktop Test Suite] -->

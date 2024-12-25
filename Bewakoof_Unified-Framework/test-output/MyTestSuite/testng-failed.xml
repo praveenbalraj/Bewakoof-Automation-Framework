@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="tests" name="Failed suite [MyTestSuite]">
+  <test thread-count="2" parallel="tests" name="Desktop Chrome(failed)">
+    <parameter name="browser" value="chrome"/>
+    <parameter name="platform" value="desktop"/>
+    <classes>
+      <class name="com.qa.bk.PLPmodule.PLPTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="text"/>
+          <include name="startserver"/>
+          <include name="setUp"/>
+          <include name="stopserver"/>
+        </methods>
+      </class> <!-- com.qa.bk.PLPmodule.PLPTest -->
+    </classes>
+  </test> <!-- Desktop Chrome(failed) -->
+</suite> <!-- Failed suite [MyTestSuite] -->

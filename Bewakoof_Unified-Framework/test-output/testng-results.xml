@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-12-25T20:44:35 IST" name="DesktopSuite" finished-at="2024-12-25T20:45:34 IST" duration-ms="59433">
+    <groups>
+    </groups>
+    <test started-at="2024-12-25T20:44:35 IST" name="BewakoofTest" finished-at="2024-12-25T20:45:34 IST" duration-ms="59433">
+      <class name="com.qa.bk.DesktopModule.PLPTest">
+        <test-method is-config="true" signature="startserver(java.lang.String,java.lang.String)[pri:0, instance:com.qa.bk.DesktopModule.PLPTest@53fe15ff]" started-at="2024-12-25T20:44:35 IST" name="startserver" finished-at="2024-12-25T20:44:35 IST" duration-ms="11" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[desktop]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startserver -->
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:com.qa.bk.DesktopModule.PLPTest@53fe15ff]" started-at="2024-12-25T20:44:35 IST" name="setUp" finished-at="2024-12-25T20:44:48 IST" duration-ms="12605" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[desktop]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="Validate_Filter_Functionality()[pri:0, instance:com.qa.bk.DesktopModule.PLPTest@53fe15ff]" started-at="2024-12-25T20:44:48 IST" name="Validate_Filter_Functionality" finished-at="2024-12-25T20:44:57 IST" duration-ms="9906" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Validate_Filter_Functionality -->
+        <test-method is-config="true" signature="am()[pri:0, instance:com.qa.bk.DesktopModule.PLPTest@53fe15ff]" started-at="2024-12-25T20:44:57 IST" name="am" finished-at="2024-12-25T20:44:59 IST" duration-ms="1440" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- am -->
+        <test-method signature="Validate_Sort_Functionality()[pri:0, instance:com.qa.bk.DesktopModule.PLPTest@53fe15ff]" started-at="2024-12-25T20:44:59 IST" name="Validate_Sort_Functionality" finished-at="2024-12-25T20:45:21 IST" duration-ms="21922" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Validate_Sort_Functionality -->
+        <test-method is-config="true" signature="am()[pri:0, instance:com.qa.bk.DesktopModule.PLPTest@53fe15ff]" started-at="2024-12-25T20:45:21 IST" name="am" finished-at="2024-12-25T20:45:22 IST" duration-ms="730" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- am -->
+        <test-method signature="Verify_ProductName_Data_Integrity()[pri:0, instance:com.qa.bk.DesktopModule.PLPTest@53fe15ff]" started-at="2024-12-25T20:45:22 IST" name="Verify_ProductName_Data_Integrity" finished-at="2024-12-25T20:45:22 IST" duration-ms="643" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Verify_ProductName_Data_Integrity -->
+        <test-method is-config="true" signature="am()[pri:0, instance:com.qa.bk.DesktopModule.PLPTest@53fe15ff]" started-at="2024-12-25T20:45:22 IST" name="am" finished-at="2024-12-25T20:45:24 IST" duration-ms="2140" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- am -->
+        <test-method signature="Verify_Product_Data_Integrity_On_PLP_PDP_and_Cart()[pri:0, instance:com.qa.bk.DesktopModule.PLPTest@53fe15ff]" started-at="2024-12-25T20:45:24 IST" name="Verify_Product_Data_Integrity_On_PLP_PDP_and_Cart" finished-at="2024-12-25T20:45:33 IST" duration-ms="8648" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Verify_Product_Data_Integrity_On_PLP_PDP_and_Cart -->
+        <test-method is-config="true" signature="am()[pri:0, instance:com.qa.bk.DesktopModule.PLPTest@53fe15ff]" started-at="2024-12-25T20:45:33 IST" name="am" finished-at="2024-12-25T20:45:34 IST" duration-ms="850" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- am -->
+        <test-method is-config="true" signature="ac()[pri:0, instance:com.qa.bk.DesktopModule.PLPTest@53fe15ff]" started-at="2024-12-25T20:45:34 IST" name="ac" finished-at="2024-12-25T20:45:34 IST" duration-ms="276" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ac -->
+        <test-method is-config="true" signature="stopserver(java.lang.String,java.lang.String)[pri:0, instance:com.qa.bk.DesktopModule.PLPTest@53fe15ff]" started-at="2024-12-25T20:45:34 IST" name="stopserver" finished-at="2024-12-25T20:45:34 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[desktop]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopserver -->
+      </class> <!-- com.qa.bk.DesktopModule.PLPTest -->
+    </test> <!-- BewakoofTest -->
+  </suite> <!-- DesktopSuite -->
+</testng-results>

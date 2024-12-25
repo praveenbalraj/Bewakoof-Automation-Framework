@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Mobile Test Suite]" guice-stage="DEVELOPMENT">
+  <parameter name="browser" value="chrome"/>
+  <parameter name="platform" value="mobile"/>
+  <listeners>
+    <listener class-name="com.qa.bk.genericUtility.ITestListenerImpClass"/>
+  </listeners>
+  <test thread-count="5" name="Bewakoof Test(failed)">
+    <classes>
+      <class name="com.qa.bk.PLPmodule.PLPTest">
+        <methods>
+          <include name="ac"/>
+          <include name="Verify_Product_Data_Integrity_On_PLP_PDP_and_Cart"/>
+          <include name="am"/>
+          <include name="startserver"/>
+          <include name="setUp"/>
+          <include name="stopserver"/>
+        </methods>
+      </class> <!-- com.qa.bk.PLPmodule.PLPTest -->
+    </classes>
+  </test> <!-- Bewakoof Test(failed) -->
+</suite> <!-- Failed suite [Mobile Test Suite] -->
