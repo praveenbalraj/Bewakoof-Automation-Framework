@@ -163,6 +163,12 @@ public class WebdriverUtility {
 		wait.until(ExpectedConditions.elementToBeClickable(element));
 		element.click();
 	}
+	
+	public void waitAndInputText(WebDriver driver, WebElement element, String input) {
+		WebDriverWait wait = new WebDriverWait(driver, IConstants.Implicitly_TIMEOUT);
+		wait.until(ExpectedConditions.elementToBeClickable(element));
+		element.sendKeys(input);
+	}
 
 	public void waitAndVerifyForVisibilityOfElement(WebDriver driver, WebElement element) {
 		WebDriverWait wait = new WebDriverWait(driver, IConstants.Implicitly_TIMEOUT);
@@ -202,6 +208,8 @@ public class WebdriverUtility {
 
 	}
 
+    
+    
 	/**
 	 * Mouse hovering on element, Generally used to get the element to be visible on
 	 * screen to avoid ElementClickInterceptedException

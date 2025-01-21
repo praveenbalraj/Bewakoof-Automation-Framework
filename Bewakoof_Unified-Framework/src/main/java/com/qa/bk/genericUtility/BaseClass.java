@@ -1,41 +1,30 @@
 package com.qa.bk.genericUtility;
 
 import java.io.File;
+import java.io.IOException;
+
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.annotations.*;
-import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.service.local.AppiumDriverLocalService;
-import io.appium.java_client.service.local.AppiumServiceBuilder;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 /**
  * @author Praveen B
  *
  */
 public class BaseClass {
-	private AppiumDriverLocalService server;
-
+	
     protected WebDriver driver;
-    public static WebDriver sdriver;
+    protected static WebDriver sdriver;
 	public static String URL;
-
-	/**
-	 * We will be getting this parameters from .xml file
-	 * This method is only used for Android devices, should not be used for Desktop platform to avoid unnecessary exception since there is no need of starting the Android server 
-	 * @param platform
-	 * @param browser
-	 */
-	@BeforeSuite
-	@Parameters({ "platform","browser" })
-	public void startserver(@Optional("mobile") String platform, @Optional("chrome") String browser) {
-		if (platform.equalsIgnoreCase("mobile")) {
-			server = AppiumDriverLocalService.buildService(new AppiumServiceBuilder().usingPort(4723)
-					.usingDriverExecutable(new File("C:\\Program Files\\nodejs\\node.exe")));
-			server.start();
-		}else {
-            System.out.println("Skipping server start for desktop environment.");
-        }
-	}
-
 	/**
 	 * This block will be executed to get the driver address for both Mobile and Desktop
 	 * Here we will call the 'DriverManager.Class' to Initialize driver 
@@ -44,23 +33,34 @@ public class BaseClass {
 	 * @throws Throwable
 	 */
 	@BeforeClass
-	@Parameters({ "platform","browser" })
-	public void setUp(String platform, String browser) throws Throwable {
+	@Parameters({"browser" })
+	public void setUp(String browser) throws Throwable {
 		FileUtility fileUtil = new FileUtility();
-		DriverManager.initializeDriver(platform, browser);
-		driver = DriverManager.getDriver();
 		
-		//Perform Specific actions for Desktop to maximize and mobile to unlock
-		if (platform.equalsIgnoreCase("desktop")) {
-			//maximize the browser screen - specific action for Desktop
-			driver.manage().window().maximize();
-			
-		} else if (platform.equalsIgnoreCase("mobile")) {			
-			// Unlock Device - specific action for Mobile
-			((AppiumDriver) driver).executeScript("mobile: unlock");
-		} else {
-			throw new IllegalArgumentException("Unsupported platform type: " + platform);
+		// Initialize browser driver for desktop
+		if(browser.equalsIgnoreCase("edge")) {
+			WebDriverManager.edgedriver().setup();
+	        EdgeOptions options = new EdgeOptions();
+			options.addArguments("--remote-allow-origins=*");
+            driver = new EdgeDriver(options);
+		}else if (browser.equalsIgnoreCase("chrome")) {
+			WebDriverManager.chromedriver().setup();
+			ChromeOptions options = new ChromeOptions();
+			options.addArguments("--remote-allow-origins=*");
+			driver = new ChromeDriver(options); 
+           //Getting ConnectionNotFound Exception, try other browsers
+		}else if (browser.equalsIgnoreCase("firefox")) {
+	        WebDriverManager.firefoxdriver().setup();
+	        FirefoxOptions options = new FirefoxOptions();
+			options.addArguments("--remote-allow-origins=*");
+			driver = new FirefoxDriver(options);
+		}else{
+			System.out.println("Invalid browser value on .xml file");
 		}
+		
+		sdriver=driver;
+		//maximize the browser screen - specific action for Desktop
+			driver.manage().window().maximize();
 
 		// Launch the Browser
 		URL = fileUtil.getPropertyKeyValue("prodURL", IConstants.qaURLPropertyFilePath);
@@ -80,25 +80,9 @@ public class BaseClass {
 	 */
 	@AfterClass
 	public void ac() {
-		DriverManager.quitDriver();
+		driver.quit();
 	}
 
-	/**
-	 * It is important to stop the Android server which was started Before suite
-	 * @param platform
-	 * @param browser
-	 */
-	@AfterSuite
-	@Parameters({ "platform","browser" })
-	public void stopserver(@Optional("mobile") String platform, @Optional("chrome") String browser) {
-		if (platform.equalsIgnoreCase("mobile")) {
-			server.stop();
-		}
-	}
-	
-	public void setDriver(WebDriver driver) {
-        this.driver = driver;
-    }
 
     public WebDriver getDriver() {
         return driver;
@@ -113,7 +97,18 @@ public class BaseClass {
 		WebdriverUtility wUtil = new WebdriverUtility();
 		wUtil.handleBewakoofAlertPopUp(driver);	
 	}
-
+	
+	public static String takeScreenshot(String testName) {
+        String timestamp = new JavaUtility().getSystemDateTime();
+        String destinationPath = System.getProperty("user.dir") + "/screenshots/" + testName + "_" + timestamp + ".png";
+        try {
+            File srcFile = ((TakesScreenshot) sdriver).getScreenshotAs(OutputType.FILE);
+            FileUtils.copyFile(srcFile, new File(destinationPath));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return destinationPath;
+    }
 	
 
 }

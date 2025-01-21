@@ -42,6 +42,17 @@ public class JavaUtility {
 		return formate;
 	}
 	
+	// Helper method to safely convert JavaScript return values to long
+		public long getLongValue(Object scriptResult) {
+	        if (scriptResult instanceof Double) {
+	            return ((Double) scriptResult).longValue();
+	        } else if (scriptResult instanceof Long) {
+	            return (Long) scriptResult;
+	        } else {
+	            throw new IllegalArgumentException("Unexpected script result type: " + scriptResult.getClass());
+	        }
+	    }
+		
 	/**
 	 * This method will return a random number from 0-range, mainly used on elements.get(index)
 	 * @param range

@@ -1,12 +1,18 @@
 package com.qa.bk.DesktopObjectRepository;
 
+import java.time.Duration;
 import java.util.List;
 
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.qa.bk.genericUtility.IConstants;
+import com.qa.bk.genericUtility.JavaUtility;
 import com.qa.bk.genericUtility.WebdriverUtility;
 
 public class PLPRepositoryDesktop {
@@ -17,9 +23,8 @@ public class PLPRepositoryDesktop {
 		PageFactory.initElements(driver, this);
 	}
 
-	@FindBy(xpath = "//section[@class='sc-cc115ed6-4 lhwfAJ']")
+	@FindBy(xpath = "//section[@class='sc-89d6e897-4 FQouP']")
 	private List<WebElement> ProductCards;
-
 	public List<WebElement> getProductCards() {
 		return ProductCards;
 	}
@@ -143,41 +148,47 @@ public class PLPRepositoryDesktop {
 		return brandOptions;
 	}
 
-	@FindBy(xpath = "//div[@class='sc-cc115ed6-3 dcVVIc']/div/div/span[@color='#292D35']")
+	@FindBy(xpath = "//div[@class='sc-89d6e897-3 hjDXYa']/div/div/span[@color='#292D35']")
 	private List<WebElement> brandNameProductCard;
 
 	public List<WebElement> getbrandNameProductCard() {
 		return brandNameProductCard;
 	}
 
-	@FindBy(xpath = "//div[@class='sc-cc115ed6-3 dcVVIc']/div/span")
+	@FindBy(xpath = "//span[@class='sc-f48c17b3-0 fjEpcQ']")
 	private List<WebElement> productNameProductCard;
 
 	public List<WebElement> getproductNameProductCard() {
 		return productNameProductCard;
 	}
 
-	@FindBy(xpath = "//div[@class='sc-cc115ed6-3 dcVVIc']/div/child::div[2]/span[@color='black']")
+	@FindBy(xpath = "//div[@class='sc-89d6e897-3 hjDXYa']/div/child::div[2]/span[@color='black']")
 	private List<WebElement> sellingPriceProductCard;
 
 	public List<WebElement> getsellingPriceProductCard() {
 		return sellingPriceProductCard;
 	}
 
-	@FindBy(xpath = "//div[@class='sc-cc115ed6-3 dcVVIc']/div/child::div[2]/span[@color='#676767']")
+	@FindBy(xpath = "//div[@class='sc-89d6e897-3 hjDXYa']/div/child::div[2]/span[@color='#676767']")
 	private List<WebElement> mrpProductCard;
 
 	public List<WebElement> getMRPProductCard() {
 		return mrpProductCard;
 	}
 
-	@FindBy(xpath = "//div[@class='sc-cc115ed6-3 dcVVIc']/div/child::div[2]/span[@color='#00B53A']")
+	@FindBy(xpath = "//div[@class='sc-89d6e897-3 hjDXYa']/div/child::div[2]/span[@color='#00B53A']")
 	private List<WebElement> offerProductCard;
 
 	public List<WebElement> offerProductCard() {
 		return offerProductCard;
 	}
 
+	@FindBy(xpath = "//h4[text()='Filters']/../../../form/div/div/following-sibling::div/div/ul/label")
+	private List<WebElement> firstPLPFilterOptions;
+	public List<WebElement> getFirstPLPFilterOptions() {
+		return firstPLPFilterOptions;
+	}
+	
 	/**
 	 * This method is used for Desktop version to go to PLP page from Home page Used
 	 * to avoid repetition of Code on test scripts
@@ -200,7 +211,54 @@ public class PLPRepositoryDesktop {
 		} catch (Exception e) {
 			new WebdriverUtility().waitAndClickOnElement(driver, tshirtCollection);
 		}
-	}}
+	}
+	
+	public void goToDynamicPLP_Desktop(WebDriver driver) throws InterruptedException {
+		ObjectRepositoryDesktop repo = new ObjectRepositoryDesktop(driver);
+		WebdriverUtility wUtil = new WebdriverUtility();
+		JavaUtility jUtil = new JavaUtility();
+		
+		List<WebElement> TopNav = repo.getHomeRepositoryDesktop().getTopNavigation();
+		WebDriverWait wait = new WebDriverWait(driver, IConstants.Implicitly_TIMEOUT);
+		wait.until(ExpectedConditions.visibilityOfAllElements(TopNav));
+		//Removing Mobile Cover 
+		int num = jUtil.getRanDomNumberInInteger(TopNav.size()-1);
+		wUtil.moveToElement(driver, TopNav.get(num-1));
+		
+		// Click on any collection
+		List<WebElement> tshirtCollection = repo.getHomeRepositoryDesktop().getCategoryOptions();
+		int numOpt = jUtil.getRanDomNumberInInteger(tshirtCollection.size());
+		wUtil.moveToElement(driver, tshirtCollection.get(numOpt-1));
+		
+	}
+	
+	public void Click_On_ProductCard_In_PLP() throws InterruptedException {
+		WebdriverUtility wUtil = new WebdriverUtility();
+		JavaUtility jUtil = new JavaUtility();
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		ObjectRepositoryDesktop repo = new ObjectRepositoryDesktop(driver);
+		
+		int ranProductCardNum = 1; // jUtil.getRanDomNumberInInteger(productCards.size());
+		
+		List<WebElement> productCards = repo.getPLPRepositoryDesktop().getProductCards();
+		WebElement productCard = productCards.get(ranProductCardNum);
+		wUtil.moveToElement(driver, productCard);
+		Thread.sleep(2000);
+		try {
+			wait.until(ExpectedConditions.elementToBeClickable(productCard));
+			wait.until(ExpectedConditions.invisibilityOf(productCard));
+			productCard.click();
+		} catch (StaleElementReferenceException e) {
+			e.printStackTrace();
+			driver.navigate().refresh();
+			List<WebElement> products = repo.getPLPRepositoryDesktop().getProductCards();
+			WebElement product = products.get(ranProductCardNum);
+			wait.until(ExpectedConditions.invisibilityOf(productCard));
+			wUtil.waitAndClickOnElement(driver, product);
+		}
+	}
+}
+
 
 	// PDP
 	

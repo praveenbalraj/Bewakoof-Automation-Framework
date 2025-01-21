@@ -27,6 +27,16 @@ public class ObjectRepositoryDesktop {
 		return homeRepo;
 	}
 	
+	public SearchRepositoryDesktop getSearchRepositoryDesktop() {
+		SearchRepositoryDesktop searchRepo = new SearchRepositoryDesktop(driver);
+		return searchRepo;
+	}
+	
+	public MobileRepositoryDesktop getMobileRepositoryDesktop() {
+		MobileRepositoryDesktop MobileRepo = new MobileRepositoryDesktop(driver);
+		return MobileRepo;
+	}
+	
 /*	public PDPRepository getPDPRepository() {
 		PDPRepository pdpRepo = new PDPRepository(driver);
 		return pdpRepo;

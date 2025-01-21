@@ -16,9 +16,9 @@ public class ExtentManager {
     public static ExtentReports getExtentReports() {
         if (extent == null) {
             // Use ExtentSparkReporter instead of ExtentHtmlReporter
-            ExtentSparkReporter sparkReporter = new ExtentSparkReporter("UnifiedTestReport.html");
-            sparkReporter.config().setDocumentTitle("Unified Test Report");
-            sparkReporter.config().setReportName("Desktop & Mobile Testing");
+            ExtentSparkReporter sparkReporter = new ExtentSparkReporter("DesktopTestReport.html");
+            sparkReporter.config().setDocumentTitle("Desktop Test Report");
+            sparkReporter.config().setReportName("Desktop  Testing");
 
             extent = new ExtentReports();
             extent.attachReporter(sparkReporter);

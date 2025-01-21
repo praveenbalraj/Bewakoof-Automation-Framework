@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="DesktopSuite">
+<suite name="Suite">
 	<listeners>
         <listener class-name="com.qa.bk.genericUtility.ITestListenerImpClass" />
     </listeners>
     <parameter name="platform" value="desktop" />
 	<parameter name="browser" value="edge" />
-  <test thread-count="5" name="BewakoofTest">
+  <test thread-count="5" name="Test">
     <classes>
       <class name="com.qa.bk.DesktopModule.PLPTest"/>
     </classes>
-  </test> <!-- BewakoofTest -->
-</suite> <!-- DesktopSuite -->
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
