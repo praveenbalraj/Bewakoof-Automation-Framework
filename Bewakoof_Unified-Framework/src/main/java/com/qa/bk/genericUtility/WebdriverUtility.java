@@ -12,6 +12,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
+import com.qa.bk.DesktopObjectRepository.ObjectRepositoryDesktop;
+
 /**
  * @author Praveen B 
  * Here we are storing all the application and browser related operations 
@@ -229,4 +231,20 @@ public class WebdriverUtility {
 			act.moveToElement(element).build().perform();
 		}
 	}
+	
+	public void moveAwayFromElement(WebDriver driver) throws InterruptedException {
+		Actions actions = new Actions(driver);
+		actions.moveByOffset(-1000, -1000).perform();  // Move far away
+	}
+	
+	public void verifyIfTheElementisDisplayed(WebDriver driver, WebElement WE, String message) {
+		ObjectRepositoryDesktop repo = new ObjectRepositoryDesktop(driver);
+		if(WE.isDisplayed()) {
+			System.out.println("Element is dispalyed");
+		}else {
+			Assert.fail();
+			System.err.println(message);
+		}
+	}
+	
 }

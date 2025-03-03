@@ -10,11 +10,10 @@
     <classes>
       <class name="com.qa.bk.DesktopModule.PLPTest">
         <methods>
-          <include name="Verify_search_functionality"/>
           <include name="ac"/>
-          <include name="Verify_Sort_Functionality"/>
           <include name="am"/>
           <include name="setUp"/>
+          <include name="Verify_MobileCovers"/>
         </methods>
       </class> <!-- com.qa.bk.DesktopModule.PLPTest -->
     </classes>

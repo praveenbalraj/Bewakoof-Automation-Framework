@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-skipped">Suite</span>
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -93,7 +93,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">10 methods,  3 skipped,  7 passed</span>
+                    <span class="method-stats">3 methods, 1 failed,  2 skipped,  </span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.qa.bk.DesktopModule.PLPTest" class="method navigator-link" hash-for-method="Verify_MobileCovers">Verify_MobileCovers</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title skipped">Retried methods</span>
@@ -104,64 +118,15 @@
                     <div class="method-list-content skipped suite-Suite">
                       <span>
                         <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.qa.bk.DesktopModule.PLPTest" class="method navigator-link" hash-for-method="Verify_Sort_Functionality">Verify_Sort_Functionality</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="com.qa.bk.DesktopModule.PLPTest" class="method navigator-link" hash-for-method="Verify_MobileCovers">Verify_MobileCovers</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.qa.bk.DesktopModule.PLPTest" class="method navigator-link" hash-for-method="Verify_search_functionality">Verify_search_functionality</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.qa.bk.DesktopModule.PLPTest" class="method navigator-link" hash-for-method="Verify_search_functionality">Verify_search_functionality</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="com.qa.bk.DesktopModule.PLPTest" class="method navigator-link" hash-for-method="Verify_MobileCovers">Verify_MobileCovers</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content skipped suite-Suite -->
-                  </li>
-                  <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods passed suite-Suite"> (hide)</a> <!-- hide-methods passed suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
-                    </span>
-                    <div class="method-list-content passed suite-Suite">
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.qa.bk.DesktopModule.PLPTest" class="method navigator-link" hash-for-method="Validate_Filter_Functionality">Validate_Filter_Functionality</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.qa.bk.DesktopModule.PLPTest" class="method navigator-link" hash-for-method="Verify_InfiniteScroll_functionality">Verify_InfiniteScroll_functionality</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.qa.bk.DesktopModule.PLPTest" class="method navigator-link" hash-for-method="Verify_MobileCover_functionality">Verify_MobileCover_functionality</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.qa.bk.DesktopModule.PLPTest" class="method navigator-link" hash-for-method="Verify_ProductName_Data_Integrity">Verify_ProductName_Data_Integrity</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.qa.bk.DesktopModule.PLPTest" class="method navigator-link" hash-for-method="Verify_Product_Data_Integrity_On_PLP_PDP_and_Cart">Verify_Product_Data_Integrity_On_PLP_PDP_and_Cart</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.qa.bk.DesktopModule.PLPTest" class="method navigator-link" hash-for-method="Verify_Sort_Functionality">Verify_Sort_Functionality</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.qa.bk.DesktopModule.PLPTest" class="method navigator-link" hash-for-method="Verify_search_functionality">Verify_search_functionality</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content passed suite-Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -173,6 +138,33 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.qa.bk.DesktopModule.PLPTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="Verify_MobileCovers">
+                  </a> <!-- Verify_MobileCovers -->
+                  <span class="method-name">Verify_MobileCovers</span>
+                  <div class="stack-trace">java.lang.IndexOutOfBoundsException: Index 2 out of bounds for length 0
+	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64)
+	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70)
+	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:266)
+	at java.base/java.util.Objects.checkIndex(Objects.java:359)
+	at java.base/java.util.ArrayList.get(ArrayList.java:427)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:40)
+	at jdk.proxy2/jdk.proxy2.$Proxy20.get(Unknown Source)
+	at com.qa.bk.DesktopModule.PLPTest.Verify_MobileCovers(PLPTest.java:594)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 30 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
           <div class="suite-Suite-class-skipped">
             <div class="main-panel-header rounded-window-top">
               <img src="skipped.png"/>
@@ -181,134 +173,44 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="Verify_Sort_Functionality">
-                  </a> <!-- Verify_Sort_Functionality -->
-                  <span class="method-name">Verify_Sort_Functionality</span>
-                  <div class="stack-trace">org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found in the current frame
-  (Session info: MicrosoftEdge=132.0.2957.115)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
+                  <a name="Verify_MobileCovers">
+                  </a> <!-- Verify_MobileCovers -->
+                  <span class="method-name">Verify_MobileCovers</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of all elements located by By.xpath: //*[@id=&apos;__next&apos;]/main/main/div[1]/div/div[2]/div[2]/div (tried for 10 second(s) with 500 milliseconds interval)
 Build info: version: &apos;4.8.0&apos;, revision: &apos;267030adea&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.6&apos;
 Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [a32bd465c51e7b13387ff3cef1e608e7, isElementDisplayed {id=f.95C9687B34109277F2F59DCE7DACE12F.d.EC1329E812C32CDA4D14A3F5E3819D9A.e.2932}]
-Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 132.0.2957.115, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:50567}, msedge: {msedgedriverVersion: 132.0.2957.115 (f14150e8a7c..., userDataDir: C:\Users\PRAVEE~1\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:50567/devtoo..., se:cdpVersion: 132.0.2957.115, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[EdgeDriver: MicrosoftEdge on WINDOWS (a32bd465c51e7b13387ff3cef1e608e7)] -&gt; xpath: //section[@class=&apos;sc-89d6e897-4 FQouP&apos;]]
-Session ID: a32bd465c51e7b13387ff3cef1e608e7
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
-	at org.openqa.selenium.remote.RemoteWebElement.isDisplayed(RemoteWebElement.java:313)
-	at org.openqa.selenium.support.ui.ExpectedConditions$9.apply(ExpectedConditions.java:267)
-	at org.openqa.selenium.support.ui.ExpectedConditions$9.apply(ExpectedConditions.java:263)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
-	at com.qa.bk.DesktopModule.PLPTest.Verify_Sort_Functionality(PLPTest.java:139)
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 133.0.3065.82, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:64639}, msedge: {msedgedriverVersion: 133.0.3065.82 (e8aeaf3e0117..., userDataDir: C:\Users\PRAVEE~1\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64639/devtoo..., se:cdpVersion: 133.0.3065.82, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6ac44a64f32f3b4e8f315cc098a5a08a
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at com.qa.bk.DesktopModule.PLPTest.Verify_MobileCovers(PLPTest.java:600)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 32 stack frames
+... Removed 27 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="Verify_search_functionality">
-                  </a> <!-- Verify_search_functionality -->
-                  <span class="method-name">Verify_search_functionality</span>
-                  <div class="stack-trace">java.lang.IndexOutOfBoundsException: Index 1 out of bounds for length 1
-	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64)
-	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70)
-	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:266)
-	at java.base/java.util.Objects.checkIndex(Objects.java:359)
-	at java.base/java.util.ArrayList.get(ArrayList.java:427)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:40)
-	at jdk.proxy2/jdk.proxy2.$Proxy19.get(Unknown Source)
-	at com.qa.bk.DesktopModule.PLPTest.Verify_search_functionality(PLPTest.java:268)
+                  <a name="Verify_MobileCovers">
+                  </a> <!-- Verify_MobileCovers -->
+                  <span class="method-name">Verify_MobileCovers</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of all elements located by By.xpath: //*[@id=&apos;__next&apos;]/main/main/div[1]/div/div[2]/div[2]/div (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.8.0&apos;, revision: &apos;267030adea&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.6&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 133.0.3065.82, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:64639}, msedge: {msedgedriverVersion: 133.0.3065.82 (e8aeaf3e0117..., userDataDir: C:\Users\PRAVEE~1\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64639/devtoo..., se:cdpVersion: 133.0.3065.82, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6ac44a64f32f3b4e8f315cc098a5a08a
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at com.qa.bk.DesktopModule.PLPTest.Verify_MobileCovers(PLPTest.java:600)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 30 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="Verify_search_functionality">
-                  </a> <!-- Verify_search_functionality -->
-                  <span class="method-name">Verify_search_functionality</span>
-                  <div class="stack-trace">java.lang.IndexOutOfBoundsException: Index 1 out of bounds for length 0
-	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64)
-	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70)
-	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:266)
-	at java.base/java.util.Objects.checkIndex(Objects.java:359)
-	at java.base/java.util.ArrayList.get(ArrayList.java:427)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:40)
-	at jdk.proxy2/jdk.proxy2.$Proxy19.get(Unknown Source)
-	at com.qa.bk.DesktopModule.PLPTest.Verify_search_functionality(PLPTest.java:268)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 30 stack frames
+... Removed 27 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Suite-class-skipped -->
-          <div class="suite-Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.qa.bk.DesktopModule.PLPTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="Validate_Filter_Functionality">
-                  </a> <!-- Validate_Filter_Functionality -->
-                  <span class="method-name">Validate_Filter_Functionality</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="Verify_InfiniteScroll_functionality">
-                  </a> <!-- Verify_InfiniteScroll_functionality -->
-                  <span class="method-name">Verify_InfiniteScroll_functionality</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="Verify_MobileCover_functionality">
-                  </a> <!-- Verify_MobileCover_functionality -->
-                  <span class="method-name">Verify_MobileCover_functionality</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="Verify_ProductName_Data_Integrity">
-                  </a> <!-- Verify_ProductName_Data_Integrity -->
-                  <span class="method-name">Verify_ProductName_Data_Integrity</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="Verify_Product_Data_Integrity_On_PLP_PDP_and_Cart">
-                  </a> <!-- Verify_Product_Data_Integrity_On_PLP_PDP_and_Cart -->
-                  <span class="method-name">Verify_Product_Data_Integrity_On_PLP_PDP_and_Cart</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="Verify_Sort_Functionality">
-                  </a> <!-- Verify_Sort_Functionality -->
-                  <span class="method-name">Verify_Sort_Functionality</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="Verify_search_functionality">
-                  </a> <!-- Verify_search_functionality -->
-                  <span class="method-name">Verify_search_functionality</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -326,7 +228,11 @@ Session ID: a32bd465c51e7b13387ff3cef1e608e7
   &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.qa.bk.DesktopModule.PLPTest&quot;/&gt;
+      &lt;class name=&quot;com.qa.bk.DesktopModule.PLPTest&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;Verify_MobileCovers&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.qa.bk.DesktopModule.PLPTest --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -366,52 +272,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(10);
+data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'Verify_ProductName_Data_Integrity')
+data.setCell(0, 1, 'Verify_MobileCovers')
 data.setCell(0, 2, 'com.qa.bk.DesktopModule.PLPTest')
-data.setCell(0, 3, 63264);
+data.setCell(0, 3, 205249);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'Verify_search_functionality')
+data.setCell(1, 1, 'Verify_MobileCovers')
 data.setCell(1, 2, 'com.qa.bk.DesktopModule.PLPTest')
-data.setCell(1, 3, 60089);
+data.setCell(1, 3, 203769);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'Verify_MobileCover_functionality')
+data.setCell(2, 1, 'Verify_MobileCovers')
 data.setCell(2, 2, 'com.qa.bk.DesktopModule.PLPTest')
-data.setCell(2, 3, 51198);
-data.setCell(3, 0, 3)
-data.setCell(3, 1, 'Verify_InfiniteScroll_functionality')
-data.setCell(3, 2, 'com.qa.bk.DesktopModule.PLPTest')
-data.setCell(3, 3, 26801);
-data.setCell(4, 0, 4)
-data.setCell(4, 1, 'Verify_Sort_Functionality')
-data.setCell(4, 2, 'com.qa.bk.DesktopModule.PLPTest')
-data.setCell(4, 3, 18021);
-data.setCell(5, 0, 5)
-data.setCell(5, 1, 'Validate_Filter_Functionality')
-data.setCell(5, 2, 'com.qa.bk.DesktopModule.PLPTest')
-data.setCell(5, 3, 10207);
-data.setCell(6, 0, 6)
-data.setCell(6, 1, 'Verify_Product_Data_Integrity_On_PLP_PDP_and_Cart')
-data.setCell(6, 2, 'com.qa.bk.DesktopModule.PLPTest')
-data.setCell(6, 3, 7544);
-data.setCell(7, 0, 7)
-data.setCell(7, 1, 'Verify_search_functionality')
-data.setCell(7, 2, 'com.qa.bk.DesktopModule.PLPTest')
-data.setCell(7, 3, 5684);
-data.setCell(8, 0, 8)
-data.setCell(8, 1, 'Verify_search_functionality')
-data.setCell(8, 2, 'com.qa.bk.DesktopModule.PLPTest')
-data.setCell(8, 3, 5573);
-data.setCell(9, 0, 9)
-data.setCell(9, 1, 'Verify_Sort_Functionality')
-data.setCell(9, 2, 'com.qa.bk.DesktopModule.PLPTest')
-data.setCell(9, 3, 4109);
+data.setCell(2, 3, 61895);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 4 minutes</span>
+              <span class="suite-total-time">Total running time: 7 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -426,9 +304,30 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">8 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.qa.bk.DesktopModule.PLPTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">Verify_Sort_Functionality</span>
+                <br/>
+                <span class="ignored-method-name">Verify_InfiniteScroll_functionality</span>
+                <br/>
+                <span class="ignored-method-name">Validate_Filter_Functionality</span>
+                <br/>
+                <span class="ignored-method-name">Verify_SortPriceLowToHigh_functionality</span>
+                <br/>
+                <span class="ignored-method-name">Verify_Product_Data_Integrity_On_PLP_PDP_and_Cart</span>
+                <br/>
+                <span class="ignored-method-name">Verify_MobileCover_functionality</span>
+                <br/>
+                <span class="ignored-method-name">Verify_ProductName_Data_Integrity</span>
+                <br/>
+                <span class="ignored-method-name">Verify_SortPriceHighToLow_functionality</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Suite" class="panel">
@@ -443,88 +342,34 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">Validate_Filter_Functionality</span>
-                <span class="method-start">11234 ms</span>
+                <span class="method-name">Verify_MobileCovers</span>
+                <span class="method-start">12546 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">am</span>
-                <span class="method-start">21441 ms</span>
+                <span class="method-start">217810 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
-                <span class="method-name">Verify_InfiniteScroll_functionality</span>
-                <span class="method-start">21930 ms</span>
+                <span class="method-name">Verify_MobileCovers</span>
+                <span class="method-start">219266 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">am</span>
-                <span class="method-start">48731 ms</span>
+                <span class="method-start">423041 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
-                <span class="method-name">Verify_MobileCover_functionality</span>
-                <span class="method-start">49185 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">Verify_MobileCovers</span>
+                <span class="method-start">425206 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">am</span>
-                <span class="method-start">100384 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="test-method">
-                <span class="method-name">Verify_ProductName_Data_Integrity</span>
-                <span class="method-start">101517 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">am</span>
-                <span class="method-start">164781 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="test-method">
-                <span class="method-name">Verify_Product_Data_Integrity_On_PLP_PDP_and_Cart</span>
-                <span class="method-start">167299 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">am</span>
-                <span class="method-start">174846 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="test-method">
-                <span class="method-name">Verify_Sort_Functionality</span>
-                <span class="method-start">175415 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">am</span>
-                <span class="method-start">179536 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="test-method">
-                <span class="method-name">Verify_Sort_Functionality</span>
-                <span class="method-start">180096 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">am</span>
-                <span class="method-start">198117 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="test-method">
-                <span class="method-name">Verify_search_functionality</span>
-                <span class="method-start">198739 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">am</span>
-                <span class="method-start">204327 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="test-method">
-                <span class="method-name">Verify_search_functionality</span>
-                <span class="method-start">205487 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">am</span>
-                <span class="method-start">211171 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="test-method">
-                <span class="method-name">Verify_search_functionality</span>
-                <span class="method-start">212039 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">am</span>
-                <span class="method-start">272139 ms</span>
+                <span class="method-start">487104 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">ac</span>
-                <span class="method-start">272780 ms</span>
+                <span class="method-start">487962 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

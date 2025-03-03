@@ -6,10 +6,9 @@
       <class name="com.qa.bk.DesktopModule.PLPTest">
         <methods>
           <include name="ac"/>
-          <include name="Validate_Filter_Functionality"/>
-          <include name="startserver"/>
+          <include name="am"/>
           <include name="setUp"/>
-          <include name="stopserver"/>
+          <include name="Verify_MobileCovers"/>
         </methods>
       </class> <!-- com.qa.bk.DesktopModule.PLPTest -->
     </classes>

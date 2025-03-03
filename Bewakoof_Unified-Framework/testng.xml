@@ -4,11 +4,11 @@
 	<listeners>
         <listener class-name="com.qa.bk.genericUtility.ITestListenerImpClass" />
     </listeners>
-    <parameter name="platform" value="desktop" />
-	<parameter name="browser" value="edge" />
+    <parameter name="browser" value="edge"></parameter>
+    <parameter name="platform" value="desktop"></parameter>
   <test thread-count="5" name="Test">
     <classes>
-      <class name="com.qa.bk.DesktopModule.PLPTest"/>
+      <class name="com.qa.bk.DesktopModule.PLPTest"><methods><include name="Verify_MobileCovers"></include></methods></class>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

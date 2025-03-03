@@ -28,6 +28,12 @@ public class SearchRepositoryDesktop {
 		return viewAllResultCTA;
 	}
 	
+	@FindBy(xpath="//div[@id='__next']/main/main/header/div/div[2]/div[2]/ul/li/div/div/div[2]")
+	private WebElement searchSuggestionContainer;
+	public WebElement getSearchSuggestionContainer() {
+		return searchSuggestionContainer;
+	}
+	
 	/**
 	 * @return
 	 */
@@ -35,6 +41,24 @@ public class SearchRepositoryDesktop {
 	private List<WebElement> searchSuggestionResult;
 	public List<WebElement> getSearchSuggestionResult() {
 		return searchSuggestionResult;
+	}
+	
+	@FindBy(xpath="//div[@id='__next']/main/main/header/div/div[2]/div[2]/ul/li/div/div/div[2]/div")
+	private List<WebElement> allSearchSuggestionResult;
+	public List<WebElement> getALLSearchSuggestionResult() {
+		return allSearchSuggestionResult;
+	}
+	
+	@FindBy(xpath="//img[@alt='no-search-results']")
+	private WebElement noResultsFoundImage;
+	public WebElement getNoResultsFoundImage() {
+		return noResultsFoundImage;
+	}
+	
+	@FindBy(xpath="//img[@alt='no-search-results']/parent::div/div")
+	private WebElement noResultsFoundParagraph;
+	public WebElement getNoResultsFoundParagraph() {
+		return noResultsFoundParagraph;
 	}
 	
 }

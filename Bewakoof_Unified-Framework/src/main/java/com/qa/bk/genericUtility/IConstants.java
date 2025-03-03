@@ -12,7 +12,7 @@ public interface IConstants {
 		String qaURLPropertyFilePath = "./propertyFile/qa.url.properties";
 		
 		int retryValue = 1;
-		String Extent_ReportPath = "../Bewakoof_TDD_Desktop/reports/extentReports/";
+		String Extent_ReportPath = "../Bewakoof_Unified-Framework/reports/extentReports/";
 		Duration Explicitly_TIMEOUT = Duration.ofSeconds(20);
 		Duration Implicitly_TIMEOUT = Duration.ofSeconds(20);
 		String searchInput = "Joggers";

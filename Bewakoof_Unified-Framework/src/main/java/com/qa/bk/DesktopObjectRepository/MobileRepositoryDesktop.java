@@ -50,4 +50,22 @@ public class MobileRepositoryDesktop {
 	public WebElement getshowMobileCoverButton() {
 		return showMobileButton;
 	}
+	
+	@FindBy(xpath = "//*[@id='__next']/main/main/div[1]/div/div[2]/div[2]/div/div/div")
+	private List<WebElement> mobileBrand;
+	public List<WebElement> getMobileBrand() {
+		return mobileBrand;
+	}
+	
+	@FindBy(xpath = "//*[@id='__next']/main/main/div[1]/div/div[2]/div[2]/div")
+	private List<WebElement> mobileModel;
+	public List<WebElement> getMobileModel() {
+		return mobileModel;
+	}
+	@FindBy(xpath = "//span[text()='No Items Found']")
+	private WebElement noItemFoundText;
+	public WebElement getNoItemFoundText() {
+		return noItemFoundText;
+	}
+	
 }
